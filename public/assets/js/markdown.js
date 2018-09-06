@@ -1,8 +1,22 @@
 <script src="http://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
 
 
-gethtmltext(getmarkdowntext());
+window.onload = function () {
+    // 要素を取得
+    var previewTA = document.querySelector('.preview .ta');
 
+    var sync = function () {
+        var value = getmarkdowntext(); // テキストエリアから値を取得
+        var md = gethtmltext(value); // マークダウンに変換
+        document.getElementById("article").innerHTML = md;
+    };
+    // ブラー時に変換する
+    editorTA.onblur = sync;
+    // 一回やっとく
+    sync();
+};
+
+//マークダウンをHTMLに変換
 function gethtmltext(markdowntext) {
     var md = marked(markdowntext);
     return md;
@@ -28,3 +42,5 @@ function getParam(name, url) {
     if (!results[2]) return '';
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
+
+
