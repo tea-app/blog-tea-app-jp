@@ -1,6 +1,3 @@
-<script src="http://cdnjs.cloudflare.com/ajax/libs/marked/0.3.2/marked.min.js"></script>
-
-
 window.onload = function () {
     var sync = function () {
         var value = getmarkdowntext(); // テキストエリアから値を取得
