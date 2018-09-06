@@ -1,13 +1,9 @@
 window.onload = function () {
-    var view = document.querySelector('.main .article');
-
     var sync = function () {
         var value = getmarkdowntext(); // テキストエリアから値を取得
         var md = gethtmltext(value); // マークダウンに変換
         document.getElementById("article").innerHTML = md;
     };
-    // ブラー時に変換する
-    view.onblur = sync;
     // 一回やっとく
     sync();
 };
