@@ -2,9 +2,6 @@
 
 
 window.onload = function () {
-    // 要素を取得
-    var previewTA = document.querySelector('.preview .ta');
-
     var sync = function () {
         var value = getmarkdowntext(); // テキストエリアから値を取得
         var md = gethtmltext(value); // マークダウンに変換
