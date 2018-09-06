@@ -30,6 +30,16 @@ function getmarkdowntext() {
     return text;
 }
 
+function createXMLHttpRequest() {
+    if (window.XMLHttpRequest) { return new XMLHttpRequest() }
+    if (window.ActiveXObject) {
+        try { return new ActiveXObject("Msxml2.XMLHTTP.6.0") } catch (e) { }
+        try { return new ActiveXObject("Msxml2.XMLHTTP.3.0") } catch (e) { }
+        try { return new ActiveXObject("Microsoft.XMLHTTP") } catch (e) { }
+    }
+    return false;
+}
+
 /**
  * Get the URL parameter value
  *
