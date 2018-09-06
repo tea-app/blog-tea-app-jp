@@ -16,7 +16,10 @@ function gethtmltext(markdowntext) {
 
 function getmarkdowntext() {
     var id = getParam('id');
-    return "#Hello";
+    var fs = new ActiveXObject("Scripting.FileSystemObject");
+    var file = fs.OpenTextFile("/blog/contents/test/" + "main.md");
+    text = file.ReadAll();
+    return text;
 }
 
 /**
@@ -35,4 +38,24 @@ function getParam(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
+function getMarkdownFile(id) {
+    var f = new Folder(folderPath);
+    f.next();
 
+    while (!f.end) {
+
+        if (f.filetype != "fold") {
+
+            post("filename:" + f.filename);
+            post();
+
+        } else {
+
+            postFile(f.filename);
+        }
+
+        f.next();
+    }
+
+    f.close();
+}
