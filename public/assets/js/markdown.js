@@ -16,9 +16,17 @@ function gethtmltext(markdowntext) {
 
 function getmarkdowntext() {
     var id = getParam('id');
-    var fs = new ActiveXObject("Scripting.FileSystemObject");
-    var file = fs.OpenTextFile("/blog/contents/test/" + "main.md");
-    text = file.ReadAll();
+    var url = "/blog/contents/test/" + "main.md";
+    var request = createXMLHttpRequest();
+    var text = "";
+    request.open("GET", url, true);
+    request.send("");
+    request.onreadystatechange = function () {
+        if (request.readyState == 4 && request.status == 200) {
+            //受信完了時の処理
+            text = document.createTextNode(decodeURI(request.responseText));
+        }
+    }
     return text;
 }
 
