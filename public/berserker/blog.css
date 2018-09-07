@@ -38,8 +38,8 @@
     top: 90px;
     position: fixed;
     right: 0px;
-    width: 250;
-    background-color: gray;
+    width: 220;
+    background-color: white;
     border-radius: 10px;
     box-shadow: none;
     overflow: scroll;
@@ -48,6 +48,7 @@
   .blog-comments h1 {
     padding: 0px 2px 4px 4px;
     font-size: 20px;
+    color: black;
   }
 
   textarea.box{
