@@ -42,7 +42,7 @@
     top: 90px;
     position: fixed;
     right: 0px;
-    width: 220;
+    width: 200;
     background-color: white;
     border-radius: 10px;
     box-shadow: none;
@@ -59,7 +59,7 @@
     border-radius: 10px;
     box-shadow: none;
     padding: 2px 8px;
-    width: 50%;
-    height: 50%;
+    width: 30%;
+    height: 30%;
   }
 
