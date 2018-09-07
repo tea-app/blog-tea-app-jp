@@ -20,12 +20,9 @@ function getmarkdowntext() {
     var request = createXMLHttpRequest();
     var text = "";
     request.open("GET", url);
-    request.addEventListener("load", (event) => {
-        console.log(event.target.status); // => 200
-        console.log(event.target.responseText); // => "{...}"
-        return event.target.responseText;
-    });
     request.send();
+    console.log(xmlHttp.responseText);
+    return xmlHttp.responseText;
 }
 
 function createXMLHttpRequest() {
