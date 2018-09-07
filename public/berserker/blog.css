@@ -24,18 +24,19 @@
   
   .blog-archives{
     position: fixed;
-    width: 15%;
+    width: 288;
     left: 0px;
   }
 
   .blog-archives h1{
     padding: 0px 2px 4px 4px;
+    font-size: 10px;
   }
 
   .blog-comments{
     position: fixed;
     right: 0px;
-    width: 15%;
+    width: 288;
     background-color: gray;
     border-radius: 10px;
     box-shadow: none;
@@ -44,6 +45,7 @@
 
   .blog-comments h1 {
     padding: 0px 2px 4px 4px;
+    font-size: 10px;
   }
 
   textarea.box{
