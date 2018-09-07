@@ -1,0 +1,67 @@
+.main {
+    width: 60%;
+    padding: 50px 10px;
+    margin: 10% 20%;
+  }
+  
+  .blog-title{
+    border-top: 1px solid gray;
+    border-bottom: 0.1px solid gray;
+    padding: 5px 0;
+    font-size: 30px;
+  }
+  
+  .blog-contents{
+    border-top: 2px solid gray;
+    padding: 30px 10px 100px;
+  }
+  .blog-arrow{
+    padding: 10px 0 2px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    text-align: center;
+  }
+  
+  .blog-archives{
+    top: 90px;
+    position: fixed;
+    width: 200px;
+    left: 20px;
+  }
+
+  .blog-archives h1{
+    padding: 0px 2px 4px 4px;
+    font-size: 20px;
+  }
+
+  .blog-archive-list{
+    padding-top: 20px; 
+  }
+
+  .blog-archive{
+    left: 30px;
+    }
+
+  .blog-comments{
+    top: 90px;
+    position: fixed;
+    right: 20px;
+    width: 200px;
+  }
+
+  .blog-comments h1 {
+    padding: 0px 2px 4px 4px;
+    font-size: 20px;
+    color: black;
+    border: 5px solid black;
+  }
+
+  textarea.box{
+    border: none;
+    border-radius: 10px;
+    box-shadow: none;
+    padding: 2px 8px;
+    width: 20%;
+    height: 10%;
+  }
+
