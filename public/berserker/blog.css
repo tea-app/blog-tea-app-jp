@@ -23,6 +23,7 @@
   }
   
   .blog-archives{
+    top: 0;
     position: fixed;
     width: 288;
     left: 0px;
@@ -30,10 +31,11 @@
 
   .blog-archives h1{
     padding: 0px 2px 4px 4px;
-    font-size: 10px;
+    font-size: 20px;
   }
 
   .blog-comments{
+    top: 0;
     position: fixed;
     right: 0px;
     width: 288;
@@ -45,7 +47,7 @@
 
   .blog-comments h1 {
     padding: 0px 2px 4px 4px;
-    font-size: 10px;
+    font-size: 20px;
   }
 
   textarea.box{
