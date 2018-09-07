@@ -1,14 +1,14 @@
 window.onload = function () {
     var sync = function () {
-        var value = "";
         getmarkdowntext(URL).then(function onFulfilled(value) {
-            value = getmarkdowntext(); // テキストエリアから値を取得
+            var value = getmarkdowntext(); // テキストエリアから値を取得
+            console.log(value);
+            var md = gethtmltext(value); // マークダウンに変換
+            document.getElementById("article").innerHTML = md;
         }).catch(function onRejected(error) {
             console.error(error);
+            document.getElementById("article").innerHTML = error;
         });
-        console.log(value);
-        var md = gethtmltext(value); // マークダウンに変換
-        document.getElementById("article").innerHTML = md;
     };
     // 一回やっとく
     sync();
