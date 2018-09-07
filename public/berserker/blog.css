@@ -36,6 +36,7 @@
 
   .blog-archive-list ul {
     list-style: none;
+    font-size: 10px;
   }
 
   .blog-comments{
