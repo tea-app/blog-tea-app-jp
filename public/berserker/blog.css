@@ -34,6 +34,10 @@
     font-size: 20px;
   }
 
+  .blog-archive-list{
+    padding: 5px 0px;
+  }
+
   .blog-comments{
     top: 90px;
     position: fixed;
@@ -42,7 +46,6 @@
     background-color: white;
     border-radius: 10px;
     box-shadow: none;
-    overflow: scroll;
   }
 
   .blog-comments h1 {
