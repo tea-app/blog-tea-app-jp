@@ -35,8 +35,12 @@
   }
 
   .blog-archive-list{
-    padding-top :20px; 
+    padding-top: 20px; 
   }
+
+  .blog-archive{
+    padding-left: 10px;
+    }
 
   .blog-comments{
     top: 90px;
