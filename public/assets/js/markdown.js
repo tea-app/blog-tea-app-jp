@@ -20,8 +20,21 @@ function getmarkdowntext() {
     var request = createXMLHttpRequest();
     var text = "";
     request.open("GET", url);
+
+    request.addEventListener("load", (event) => {
+        if (event.target.status !== 200) {
+            console.log(`${event.target.status}: ${event.target.statusText}`);
+            return event.target.responseText;
+        }
+        console.log(event.target.status);
+        console.log(event.target.responseText);
+    });
+
+    request.addEventListener("error", () => {
+        console.error("Network Error");
+    });
+
     request.send();
-    console.log(request.responseText);
     return request.responseText;
 }
 
