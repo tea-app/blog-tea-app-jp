@@ -22,7 +22,7 @@ function gethtmltext(markdowntext) {
 function getmarkdowntext() {
     return new Promise((resolve, reject) => {
         var id = getParam('id');
-        var url = "/blog/contents/test/" + "main.md";
+        var url = "/blog/contents/" + id + "/main.md";
         var request = createXMLHttpRequest();
         request.open("GET", url);
 
