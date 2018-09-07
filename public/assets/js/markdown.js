@@ -19,15 +19,13 @@ function getmarkdowntext() {
     var url = "/blog/contents/test/" + "main.md";
     var request = createXMLHttpRequest();
     var text = "";
-    request.open("GET", url, true);
-    request.send("");
-    request.onreadystatechange = function () {
-        if (request.readyState == 4 && request.status == 200) {
-            //受信完了時の処理
-            text = document.createTextNode(decodeURI(request.responseText));
-        }
-    }
-    return text;
+    request.open("GET", url);
+    request.addEventListener("load", (event) => {
+        console.log(event.target.status); // => 200
+        console.log(event.target.responseText); // => "{...}"
+        return event.target.responseText;
+    });
+    request.send();
 }
 
 function createXMLHttpRequest() {
