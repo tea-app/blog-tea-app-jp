@@ -120,5 +120,5 @@ function getMarkdownFile(id) {
 }
 
 function getlastestid() {
-
+    return "2000-01-01-12-30";
 }
