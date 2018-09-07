@@ -19,7 +19,7 @@ function getmarkdowntext() {
     var url = "/blog/contents/test/" + "main.md";
     var request = createXMLHttpRequest();
     var text = "";
-    request.open("GET", url);
+    request.open("GET", url, false);
 
     request.addEventListener("load", (event) => {
         if (event.target.status !== 200) {
