@@ -3,10 +3,10 @@ window.onload = function () {
         getmarkdowntext().then(function onFulfilled(value) {
             console.log(value);
             var md = gethtmltext(value); // マークダウンに変換
-            document.getElementById("article").innerHTML = md;
+            document.getElementById("blog-contents").innerHTML = md;
         }).catch(function onRejected(error) {
             console.error(error);
-            document.getElementById("article").innerHTML = error;
+            document.getElementById("blog-contents").innerHTML = error;
         });
     };
     // 一回やっとく
