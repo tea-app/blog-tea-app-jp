@@ -1,6 +1,11 @@
 window.onload = function () {
     var sync = function () {
-        var value = getmarkdowntext(); // テキストエリアから値を取得
+        var value = "";
+        getmarkdowntext(URL).then(function onFulfilled(value) {
+            value = getmarkdowntext(); // テキストエリアから値を取得
+        }).catch(function onRejected(error) {
+            console.error(error);
+        });
         console.log(value);
         var md = gethtmltext(value); // マークダウンに変換
         document.getElementById("article").innerHTML = md;
@@ -16,27 +21,29 @@ function gethtmltext(markdowntext) {
 }
 
 function getmarkdowntext() {
-    var id = getParam('id');
-    var url = "/blog/contents/test/" + "main.md";
-    var request = createXMLHttpRequest();
-    var text = "";
-    request.open("GET", url, false);
+    return new Promise((resolve, reject) => {
+        var id = getParam('id');
+        var url = "/blog/contents/test/" + "main.md";
+        var request = createXMLHttpRequest();
+        request.open("GET", url, false);
 
-    request.addEventListener("load", (event) => {
-        if (event.target.status !== 200) {
-            console.log(`${event.target.status}: ${event.target.statusText}`);
-            return event.target.responseText;
-        }
-        console.log(event.target.status);
-        console.log(event.target.responseText);
+        request.addEventListener("load", (event) => {
+            if (event.target.status !== 200) {
+                console.log(`${event.target.status}: ${event.target.statusText}`);
+                resolve(event.target.responseText);
+            }
+            console.log(event.target.status);
+            console.log(event.target.responseText);
+        });
+
+        request.addEventListener("error", () => {
+            reject(new Error(request.statusText));
+            console.error("Network Error");
+        });
+        request.overrideMimeType('text/plain; charset=UTF-8');  //強制Text
+
+        request.send();
     });
-
-    request.addEventListener("error", () => {
-        console.error("Network Error");
-    });
-    request.overrideMimeType('text/plain; charset=UTF-8');  //強制Text
-
-    request.send();
 }
 
 function createXMLHttpRequest() {
