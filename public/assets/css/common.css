@@ -122,6 +122,41 @@ a {
 #nav-toggle span:nth-child(3) {
     top: 22px;
 }
+
+#page-nav ul {
+  width: 100%;
+  height: 200px;
+  margin: 20px 5% 10px;
+  float: left;
+}
+
+#page-nav li {
+  padding: 10px 5%;
+  margin: 50px 4%;
+  float: left;
+  list-style-type: none;
+}
+
+#page-nav a.nav-item {
+  position: relative;
+  display: block;
+  width: 160px;
+  padding: 0.8em;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #FFF;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.0);
+  background: #1A237E;
+  transition: .4s;
+  border-radius: 4px;
+}
+
+#page-nav li > a.nav-item:hover {
+text-shadow: -6px 0px 15px rgba(255, 255, 240, 0.83), 6px 0px 15px rgba(255, 255, 240, 0.83);
+transition: .4s;
+}
+
 .main {
     padding: 16px;
 }
@@ -150,13 +185,18 @@ a {
     margin: 16px 0;
 }
 .value {
-    width: 100%;
+    height: 200px;
+    width: 100%
+    float: left;
     text-align: center;
-    padding-top: 32px;
+    padding: 32px 0;
+    margin: auto;
 }
 .value-box {
-    width: 100%;
-    padding: 24px 0;
+    padding: 24px ;
+    margin: auto;
+    float: left;
+
 }
 .trust {
     color: #F2755F;
@@ -171,11 +211,11 @@ a {
     margin-bottom: 24px;
 }
 
-.activities {
+.location {
     width: 100%;
     padding-bottom: 60px;
 }
-.activities-section {
+.location-section {
     width: 100%;
     max-width: 900px;
     margin: auto;

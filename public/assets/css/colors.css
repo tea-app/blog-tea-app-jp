@@ -6,7 +6,7 @@ footer
 }
 
 .abouts,
-.activities,
+.location,
 .contacts,
 .btn
 {
@@ -21,13 +21,14 @@ footer
 #top-head.fixed,
 .logo,
 #global-nav ul li a,
+#page-nav,
 #top-head.fixed #global-nav ul li a,
 .copyright
-{    
+{
     color: #FEFEFE;
 }
 
-/* 
+/*
     文字色 黒
 */
 .abouts p,
