@@ -132,10 +132,6 @@ function getlastestid() {
 
 function getcontentslastest() {
     return new Promise((resolve, reject) => {
-        var id = getParam('id');
-        if (id == null) {
-            id = getlastestid();
-        }
         var url = "/blog/contents.json"
         var request = createXMLHttpRequest();
         request.open("GET", url);
