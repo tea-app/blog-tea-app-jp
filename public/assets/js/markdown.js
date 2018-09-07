@@ -1,10 +1,8 @@
 window.onload = function () {
     var sync = function () {
-        getmarkdowntext(URL).then(function onFulfilled(value) {
-            var value = getmarkdowntext(); // テキストエリアから値を取得
-            var valuetext = value.toString();
-            console.log(valuetext);
-            var md = gethtmltext(valuetext); // マークダウンに変換
+        getmarkdowntext().then(function onFulfilled(value) {
+            console.log(value);
+            var md = gethtmltext(value); // マークダウンに変換
             document.getElementById("article").innerHTML = md;
         }).catch(function onRejected(error) {
             console.error(error);
