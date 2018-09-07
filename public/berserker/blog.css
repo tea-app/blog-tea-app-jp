@@ -35,6 +35,10 @@
     font-size: 20px;
   }
 
+  .blog-archive {
+    list-style: none;
+  }
+
   .blog-comments{
     top: 90px;
     position: fixed;
