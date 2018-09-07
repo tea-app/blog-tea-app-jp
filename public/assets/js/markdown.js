@@ -33,6 +33,7 @@ function getmarkdowntext() {
     request.addEventListener("error", () => {
         console.error("Network Error");
     });
+    request.overrideMimeType('text/plain; charset=UTF-8');  //強制Text
 
     request.send();
 }
