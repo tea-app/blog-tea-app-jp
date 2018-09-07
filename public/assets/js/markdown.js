@@ -35,7 +35,6 @@ function getmarkdowntext() {
     });
 
     request.send();
-    return request.responseText;
 }
 
 function createXMLHttpRequest() {
