@@ -1,6 +1,7 @@
 window.onload = function () {
     var sync = function () {
         var value = getmarkdowntext(); // テキストエリアから値を取得
+        console.log(value);
         var md = gethtmltext(value); // マークダウンに変換
         document.getElementById("article").innerHTML = md;
     };
