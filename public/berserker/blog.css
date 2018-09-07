@@ -27,7 +27,6 @@
     position: fixed;
     width: 200px;
     left: 20px;
-    background-color: aquamarine;
   }
 
   .blog-archives h1{
@@ -35,7 +34,7 @@
     font-size: 20px;
   }
 
-  .blog-archive li {
+  .blog-archive ul {
     list-style: none;
   }
 
