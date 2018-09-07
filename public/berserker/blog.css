@@ -26,7 +26,7 @@
     top: 90px;
     position: fixed;
     width: 200px;
-    left: 20px;
+    left: 40px;
   }
 
   .blog-archives h1{
@@ -42,7 +42,7 @@
   .blog-comments{
     top: 90px;
     position: fixed;
-    right: 20px;
+    right: 40px;
     width: 200px;
   }
 
