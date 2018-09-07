@@ -25,7 +25,7 @@
   .blog-archives{
     top: 90px;
     position: fixed;
-    width: 200px;
+    width: 50%;
     left: 40px;
   }
 
@@ -37,13 +37,14 @@
   .blog-archive-list ul {
     list-style: none;
     font-size: 10px;
+    color: black;
   }
 
   .blog-comments{
     top: 90px;
     position: fixed;
     right: 40px;
-    width: 200px;
+    width: 50%;
   }
 
   .blog-comments h1 {
