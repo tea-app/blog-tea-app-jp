@@ -21,8 +21,8 @@ function getmarkdowntext() {
     var text = "";
     request.open("GET", url);
     request.send();
-    console.log(xmlHttp.responseText);
-    return xmlHttp.responseText;
+    console.log(request.responseText);
+    return request.responseText;
 }
 
 function createXMLHttpRequest() {
