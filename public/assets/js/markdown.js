@@ -18,7 +18,6 @@ function getmarkdowntext() {
     var id = getParam('id');
     var url = "/blog/contents/test/" + "main.md";
     var request = createXMLHttpRequest();
-    request.setRequestHeader('Content-Type', 'text/plain');
     var text = "";
     request.open("GET", url, false);
 
