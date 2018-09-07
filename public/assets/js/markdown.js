@@ -1,9 +1,23 @@
 window.onload = function () {
     var sync = function () {
-        getmarkdowntext().then(function onFulfilled(value) {
+        getcontentsinfiletext("info.json").then(function onFulfilled(value) {
+            console.log(value);
+            var title = getjsontotitle(value); // マークダウンに変換
+            var author = getjsontoauthor(value); // マークダウンに変換
+            document.getElementById("blog-title").innerHTML = title;
+            document.getElementById("blog-author").innerHTML = author;
+
+        }).catch(function onRejected(error) {
+            console.error(error);
+            document.getElementById("blog-title").innerHTML = "error";
+            document.getElementById("blog-author").innerHTML = "error";
+        });
+
+        getcontentsinfiletext("main.md").then(function onFulfilled(value) {
             console.log(value);
             var md = gethtmltext(value); // マークダウンに変換
             document.getElementById("blog-contents").innerHTML = md;
+
         }).catch(function onRejected(error) {
             console.error(error);
             document.getElementById("blog-contents").innerHTML = error;
@@ -19,10 +33,24 @@ function gethtmltext(markdowntext) {
     return md;
 }
 
-function getmarkdowntext() {
+function getjsontotitle(json) {
+    var data = JSON.parse(json);
+    return data.title;
+}
+
+function getjsontoauthor(json) {
+    var data = JSON.parse(json);
+    return data.author;
+}
+
+
+function getcontentsinfiletext(filename) {
     return new Promise((resolve, reject) => {
         var id = getParam('id');
-        var url = "/blog/contents/" + id + "/main.md";
+        if (id == null) {
+            id = getlastestid();
+        }
+        var url = "/blog/contents/" + id + "/" + filename;
         var request = createXMLHttpRequest();
         request.open("GET", url);
 
@@ -89,4 +117,8 @@ function getMarkdownFile(id) {
     }
 
     f.close();
+}
+
+function getlastestid() {
+
 }
