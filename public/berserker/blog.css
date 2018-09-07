@@ -23,9 +23,9 @@
   }
   
   .blog-archives{
-    top: 50px;
+    top: 90px;
     position: fixed;
-    width: 288;
+    width: 250;
     left: 0px;
   }
 
@@ -35,10 +35,10 @@
   }
 
   .blog-comments{
-    top: 50px;
+    top: 90px;
     position: fixed;
     right: 0px;
-    width: 288;
+    width: 250;
     background-color: gray;
     border-radius: 10px;
     box-shadow: none;
