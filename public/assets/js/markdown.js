@@ -31,8 +31,6 @@ function getmarkdowntext() {
             if (event.target.status !== 200) {
                 console.log(`${event.target.status}: ${event.target.statusText}`);
             }
-            console.log(event.target.status);
-            console.log(event.target.responseText);
             resolve(event.target.responseText);
         });
 
