@@ -30,10 +30,10 @@ function getmarkdowntext() {
         request.addEventListener("load", (event) => {
             if (event.target.status !== 200) {
                 console.log(`${event.target.status}: ${event.target.statusText}`);
-                resolve(event.target.responseText);
             }
             console.log(event.target.status);
             console.log(event.target.responseText);
+            resolve(event.target.responseText);
         });
 
         request.addEventListener("error", () => {
