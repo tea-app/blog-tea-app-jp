@@ -49,6 +49,11 @@ window.onload = function () {
 
 //マークダウンをHTMLに変換
 function gethtmltext(markdowntext) {
+    marked.setOptions({
+        gfm: true,
+        breaks: true,
+        langPrefix: ''
+    });
     var md = marked(markdowntext);
     return md;
 }
