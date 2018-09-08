@@ -1,4 +1,13 @@
 window.onload = function () {
+    var archive = function () {
+        getarchiveHTMLPromise().then(function onFulfilled(archivehtml) {
+            console.log(archivehtml);
+            document.getElementById("blog-archive-list").innerHTML = archivehtml;
+        }).catch(function onRejected(error) {
+            console.error(error);
+        })
+    }
+
     var sync = function () {
         var id;
         getcontentslastestPromise().then(function onFulfilled(value) {
@@ -35,6 +44,7 @@ window.onload = function () {
             })
     };
     sync();
+    archive();
 };
 
 //マークダウンをHTMLに変換
@@ -101,6 +111,29 @@ function getMarkdownFile() {
     f.close();
 }
 
+function getcontentsinfiletextPromise(filename, id) {
+    return new Promise((resolve, reject) => {
+        var url = "/blog/contents/" + id + "/" + filename;
+        var request = createXMLHttpRequest();
+        request.open("GET", url);
+
+        request.addEventListener("load", (event) => {
+            if (event.target.status !== 200) {
+                console.log(`${event.target.status}: ${event.target.statusText}`);
+            }
+            resolve(event.target.responseText);
+        });
+
+        request.addEventListener("error", () => {
+            reject(new Error(request.statusText));
+            console.error("Network Error");
+        });
+        request.overrideMimeType('text/plain; charset=UTF-8');  //強制Text
+
+        request.send();
+    });
+}
+
 //IDが指定されていなければ、最新の記事のIDを返す　指定されていればそれを返す
 function getcontentslastestPromise() {
     return new Promise((resolve, reject) => {
@@ -135,9 +168,10 @@ function getcontentslastestPromise() {
     });
 }
 
-function getcontentsinfiletextPromise(filename, id) {
+
+function getarchiveHTMLPromise() {
     return new Promise((resolve, reject) => {
-        var url = "/blog/contents/" + id + "/" + filename;
+        var url = "/blog/contents/contents.json"
         var request = createXMLHttpRequest();
         request.open("GET", url);
 
@@ -145,7 +179,25 @@ function getcontentsinfiletextPromise(filename, id) {
             if (event.target.status !== 200) {
                 console.log(`${event.target.status}: ${event.target.statusText}`);
             }
-            resolve(event.target.responseText);
+            var arr = JSON.parse(event.target.responseText);
+            //逆転させて新しい順にする
+            rarr = arr.reverse();
+            var result = "";
+            var href = location.href;
+            arrhref = href.split('?');
+            var blogindex = arrhref[0];
+            console.log(blogindex);
+            rarr.forEach(element => {
+                var date = element.split('-');
+                console.log(date);
+                var i = 0;
+                date.forEach(e => {
+                    date[i] = Number(e);
+                    i++;
+                });
+                result += '<li>' + date[0] + '年' + date[1] + '月<ul id="blog-archive"><li><p><a href="' + blogindex + '?id=' + element + '">' + date[2] + '日' + date[3] + '時' + date[4] + '分</a></p></li></ul></li>';
+            });
+            resolve(result);
         });
 
         request.addEventListener("error", () => {
