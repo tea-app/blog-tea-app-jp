@@ -45,9 +45,9 @@
   .blog-comments{
     top: 90px;
     position: fixed;
-    height: 100%;
-    width: 20%; 
-    overflow: scroll;
+    height: 85%;
+    width: 15%; 
+    overflow:auto;
     right: 2%;
   }
 
@@ -61,6 +61,6 @@
     border: none;
     border-radius: 10px;
     box-shadow: none;
-    padding: 20px 10px;
+    padding: 20px 0;
   }
 
