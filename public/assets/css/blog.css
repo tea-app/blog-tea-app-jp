@@ -15,9 +15,49 @@
   border-top: 2px solid gray;
   padding: 30px 10px 100px;
 }
-#blog-arrow{
+.blog-arrow{
   padding: 10px 0 2px;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   text-align: center;
 }
+
+.blog-archives{
+  top: 90px;
+  position: fixed;
+  width: 200px;
+  left: 40px;
+}
+
+.blog-archives h1{
+  padding: 0px 2px 4px 4px;
+  font-size: 20px;
+}
+
+.blog-archive-list ul {
+  list-style: none;
+  font-size: 10px;
+}
+
+.blog-comments{
+  top: 90px;
+  position: fixed;
+  right: 40px;
+  width: 200px;
+}
+
+.blog-comments h1 {
+  padding: 0px 2px 4px 4px;
+  font-size: 20px;
+  color: black;
+}
+
+textarea.box{
+  border: none;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 2px 4px;
+  width: 20%;
+  height: 10%;
+}
+

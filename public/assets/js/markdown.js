@@ -120,5 +120,35 @@ function getMarkdownFile(id) {
 }
 
 function getlastestid() {
+    getcontentslastest().then(function onFulfilled(value) {
+        console.log(value);
+        var arr = JSON.parse(value);
+        arr = arr.sort();
+        return arr[0];
+    }).catch(function onRejected(error) {
+        console.error(error);
+    });
+}
 
+function getcontentslastest() {
+    return new Promise((resolve, reject) => {
+        var url = "/blog/contents.json"
+        var request = createXMLHttpRequest();
+        request.open("GET", url);
+
+        request.addEventListener("load", (event) => {
+            if (event.target.status !== 200) {
+                console.log(`${event.target.status}: ${event.target.statusText}`);
+            }
+            resolve(event.target.responseText);
+        });
+
+        request.addEventListener("error", () => {
+            reject(new Error(request.statusText));
+            console.error("Network Error");
+        });
+        request.overrideMimeType('text/plain; charset=UTF-8');  //強制Text
+
+        request.send();
+    });
 }
