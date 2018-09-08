@@ -45,7 +45,7 @@
   .blog-comments{
     top: 90px;
     position: fixed;
-    height: 90%;
+    height: 85%;
     width: 15%; 
     overflow: scroll;
     right: 2%;
