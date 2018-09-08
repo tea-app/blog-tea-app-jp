@@ -45,6 +45,7 @@
   .blog-comments{
     top: 90px;
     position: fixed;
+    float: right;
     width: 15%; 
     overflow: scroll;
   }
