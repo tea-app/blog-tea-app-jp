@@ -27,7 +27,7 @@
     top: 90px;
     position: fixed;
     width: 30%;
-    padding-left: 40px;
+    left: 10%;
   }
 
   .blog-archives h1{
@@ -47,7 +47,7 @@
     position: fixed;
     width: 15%; 
     overflow: scroll;
-    padding-right: 40px;
+    right: 10%;
   }
 
   .blog-comments h1 {
