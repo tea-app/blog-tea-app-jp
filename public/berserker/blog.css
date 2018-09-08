@@ -15,6 +15,7 @@
     border-top: 2px solid gray;
     padding: 30px 10px 100px;
   }
+
   .blog-arrow{
     padding: 10px 0 2px;
     border-top: 1px solid gray;
@@ -32,6 +33,7 @@
   .blog-archives h1{
     padding: 0px 2px 4px 4px;
     font-size: 20px;
+    color: black;
   }
 
   .blog-archive-list ul {
@@ -45,6 +47,7 @@
     position: fixed;
     right: 40px;
     width: 30%;
+    overflow: scroll;
   }
 
   .blog-comments h1 {
@@ -57,8 +60,6 @@
     border: none;
     border-radius: 10px;
     box-shadow: none;
-    padding: 2px 4px;
-    width: 20%;
-    height: 10%;
+    padding: 20px 10px;
   }
 
