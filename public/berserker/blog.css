@@ -57,10 +57,10 @@
     color: black;
   }
 
-  textarea .box{
+  textarea{
     border: none;
     border-radius: 10px;
     box-shadow: none;
-    padding: 20px 10px;
+    padding: 20px 5px;
   }
 
