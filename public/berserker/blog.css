@@ -47,7 +47,7 @@
     position: fixed;
     height: 85%;
     width: 15%; 
-    overflow: scroll;
+    overflow:auto;
     right: 2%;
   }
 
