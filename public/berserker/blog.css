@@ -78,11 +78,12 @@
     box-shadow: none;
     padding: 2px 8px;
     margin-top: 1%;
+    margin-bottom: 0;
   }
 
   .outputbox{
     padding: 1px;
-    height: 200px;
+    max-height: 50%;
     overflow: scroll;
   }
 
