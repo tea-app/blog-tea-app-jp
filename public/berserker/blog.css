@@ -24,9 +24,10 @@
   }
   
   .blog-archives{
-    top: 90px;
     position: fixed;
     width: 30%;
+    margin-top: 5%;
+    padding-top: 50px;
     left: 3%;
   }
 
@@ -43,24 +44,29 @@
   }
 
   .blog-comments{
-    top: 90px;
     position: fixed;
-    height: 85%;
-    width: 15%; 
-    overflow:auto;
-    right: 2%;
+    width: 30%;
+    margin-top: 5%;
+    padding-top: 50px;
+    left: 3%;
   }
 
-  .blog-comments h1 {
-    padding: 0px 2px 4px 4px;
+  .blog-comments h1{
     font-size: 20px;
+    padding: 0px 2px 4px 4px;
     color: black;
   }
 
-  textarea .box{
-    border: none;
-    border-radius: 10px;
-    box-shadow: none;
-    padding: 20px 0;
+  .inputbox{
+    height: 20%;
+  }
+
+  textarea{
+    
+  }
+
+  .outputbox{
+    height: 75%;
+    overflow: scroll;
   }
 
