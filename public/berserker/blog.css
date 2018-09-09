@@ -87,10 +87,11 @@
   }
 
   .outputboxs{
-    width: 99%;
+    width: 95%;
     height: 60%;
     border: 2px solid grey;
     border-radius: 10px;
     padding: 2px 8px;
+    font-size: 5px;
   }
 
