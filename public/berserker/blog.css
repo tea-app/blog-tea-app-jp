@@ -59,10 +59,12 @@
 
   .inputbox{
     height: 20%;
+    padding: 1px;
   }
 
   .outputbox{
     height: 75%;
+    padding: 1px;
     overflow: scroll;
   }
 
