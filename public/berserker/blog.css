@@ -26,7 +26,6 @@
   .blog-archives{
     position: fixed;
     width: 30%;
-    margin-top: 5%;
     padding-top: 50px;
     left: 3%;
   }
@@ -46,7 +45,6 @@
   .blog-comments{
     position: fixed;
     width: 30%;
-    margin-top: 5%;
     padding-top: 50px;
     right: 3%;
   }
