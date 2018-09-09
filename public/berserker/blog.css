@@ -81,6 +81,7 @@
   }
 
   .outputbox{
+    height: 0;
     padding: 1px;
     overflow: scroll;
   }
