@@ -58,6 +58,7 @@
 
   .commentbox{
     border: 1px solid grey;
+    border-radius:10px;
   }
 
   .inputbox{
@@ -71,7 +72,6 @@
   textarea{
     width: 63%;
     height: 60%;
-    border:none;
     border-radius:10px;
     box-shadow: none;
     padding: 2px 8px;
