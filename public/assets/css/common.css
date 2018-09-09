@@ -2,21 +2,26 @@ h1 {
     font-size: 48px;
     font-weight: bold;
 }
+
 h2 {
     font-size: 32px;
 }
+
 p {
     font-size: 18px;
 }
+
 a {
     font-size: 16px;
     text-decoration: none;
 }
+
 .section-title {
     padding-top: 56px;
     padding-bottom: 24px;
 }
-.inner {
+
+/* .inner {
     width: 100%;
     margin: auto;
 }
@@ -24,7 +29,7 @@ a {
     content: "";
     clear: both;
     display: block;
-}
+} */
 
 .current {
   border-bottom: 5px solid royalblue;
@@ -39,21 +44,25 @@ a {
     line-height: 56px;
     z-index: 999;
 }
+
 #top-head a,
 #top-head {
     color: #303030;
     text-decoration: none;
 }
+
 #top-head .logo {
     float: left;
     margin-top: 8px;
     margin-left: 48px;
 }
+
 .logo img {
     height: 24px;
     position: absolute;
     margin-top: 8px;
 }
+
 #global-nav ul {
     width: auto;
     height: 56px;
@@ -63,18 +72,30 @@ a {
     font-size: 14px;
     float:right;
 }
+
 #global-nav ul li {
     float: left;
     line-height: 56px;
 }
-#global-nav ul li a {
-    padding: 0 20px;
+
+#global-nav ul > li > a {
+  padding: 20px;
 }
+
 #global-nav .icon {
     height: 32px;
     width: 32px;
     margin-top: 12px;
 }
+
+.icon-item {
+  height: 56px;
+}
+
+#global-nav .icon-item > a {
+  padding: 30px 20px 10px;
+}
+
 #top-head.fixed {
     margin-top: 0;
     top: 0;
@@ -84,13 +105,16 @@ a {
     -webkit-transition: top 0.65s ease-in;
     -moz-transition: top 0.65s ease-in;
 }
+
 #top-head.fixed {
     font-size: 24px;
 }
-#top-head.fixed #global-nav ul li a {
+
+#top-head.fixed ul li a {
     padding: 0 20px;
 }
-#nav-toggle {
+
+/* #nav-toggle {
     display: none;
     position: absolute;
     right: 12px;
@@ -121,7 +145,7 @@ a {
 }
 #nav-toggle span:nth-child(3) {
   top: 22px;
-}
+} */
 
 #page-nav ul {
   width: 100%;
@@ -246,19 +270,23 @@ transition: .4s;
     padding-bottom: 60px;
     display: inline-block;
 }
+
 .social-icon {
     text-decoration: none;
     cursor: pointer;
 }
+
 .contacts-section {
     width: 100%;
     max-width: 900px;
     margin: auto;
 }
+
 .contact-form {
     width: 100%;
     max-width: 450px;
 }
+
 input[type="text"], textarea {
     width: 100%;
     max-width:450px;
