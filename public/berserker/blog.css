@@ -69,8 +69,10 @@
   }
 
   textarea{
-    width: 60%;
+    width: 63%;
     height: 60%;
+    padding-top: 3px;
+    padding-left:1px 
   }
 
   .outputbox{
