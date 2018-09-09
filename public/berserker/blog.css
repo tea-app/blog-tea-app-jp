@@ -83,12 +83,12 @@
   .outputbox{
     padding: 1px;
     overflow: scroll;
-    bottom: 10%;
+    bottom: 50%;
   }
 
   .outputboxs{
     width: 90%;
-    height: 60%;
+    height: 55%;
     border: 1px solid grey;
     border-radius: 10px;
     padding: 1px 3px;
