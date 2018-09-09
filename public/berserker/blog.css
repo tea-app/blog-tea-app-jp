@@ -83,7 +83,7 @@
 
   .outputbox{
     padding: 1px;
-    max-height: 50%;
+    max-height: 20%;
     overflow: scroll;
   }
 
