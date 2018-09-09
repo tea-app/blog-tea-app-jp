@@ -82,8 +82,8 @@
 
   .outputbox{
     padding: 1px;
+    height: 200px;
     overflow: scroll;
-    bottom: 50%;
   }
 
   .outputboxs{
