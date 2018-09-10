@@ -60,7 +60,7 @@
 
     <div id="blog-contents">ロード中...</div>
 
-    <div class="blog-arrow">
+    <div id="blog-arrow">
       <a href=""> NEXT </a>
       |
       <a href=""> BACK </a>
@@ -75,14 +75,19 @@
   </div>
 
   <div class="blog-comments">
-    <h1>Comments<h1>
-        <div class="blog-input-commentbox">
-          <textarea name="comment" id="input-comments" cols="20" rows="5"></textarea>
-          <div class="blog-output-commntbox" id="output-comments">
-          </div>>
+    <h1>Comments</h1>
+    <div class="commentbox">
+      <div class="inputbox">
+        <textarea name="comment" id="input-comments" cols="15" rows="6"></textarea>
+        <input type="submit" value="送信する">
+      </div>
+      <div id="outputbox">
+        <div class="outputboxs">
+          <h1>テストコメント<br>テストコメント<br>テストコメント</h1>
         </div>
+      </div>
+    </div>
   </div>
-
 
   <footer>
     <div class="copyright">Copyright©︎ 2017 Te+A</div>

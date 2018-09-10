@@ -10,6 +10,7 @@ window.onload = function () {
 
     var sync = function () {
         var id;
+
         getcontentslastestPromise().then(function onFulfilled(value) {
             console.log(value);
             id = value;
@@ -37,12 +38,30 @@ window.onload = function () {
                 console.log(result2);
                 var md = gethtmltext(result2); // マークダウンに変換
                 document.getElementById("blog-contents").innerHTML = md;
+                return getcommenttPromise("comment.json", id);
             })
             .catch(function onRejected(error) {
                 console.error(error);
                 document.getElementById("blog-contents").innerHTML = error;
             })
+            .then(function onFulfilled(archivehtml) {
+                console.log(archivehtml);
+                document.getElementById("outputbox").innerHTML = archivehtml;
+                return getarrowHTMLPromise(id);
+            }).catch(function onRejected(error) {
+                console.error(error);
+            })
+            .then(function (arrowResult) {
+                console.log(arrowResult);
+                document.getElementById("blog-arrow").innerHTML = arrowResult;
+            }).catch(function onRejected(error) {
+                console.error(error);
+            })
     };
+
+    var arrow = function () {
+
+    }
     sync();
     archive();
 };
@@ -213,4 +232,37 @@ function getarchiveHTMLPromise() {
 
         request.send();
     });
+}
+
+function getcommenttPromise(filename, id) {
+    return new Promise((resolve, reject) => {
+        var url = "/blog/contents/" + id + "/" + filename;
+        var request = createXMLHttpRequest();
+        request.open("GET", url);
+
+        request.addEventListener("load", (event) => {
+            if (event.target.status !== 200) {
+                console.log(`${event.target.status}: ${event.target.statusText}`);
+            }
+            var arr = JSON.parse(event.target.responseText);
+            console.log(arr);
+            var result = "";
+            arr.forEach(element => {
+                result += '<div class="outputboxs"><h1>' + element + '</h1></div>';
+            });
+            resolve(result);
+        });
+
+        request.addEventListener("error", () => {
+            reject(new Error(request.statusText));
+            console.error("Network Error");
+        });
+        request.overrideMimeType('text/plain; charset=UTF-8');  //強制Text
+
+        request.send();
+    });
+}
+
+function getarrowHTMLPromise() {
+    return '<a href=""> NEXT </a>|<a href=""> BACK </a>'
 }

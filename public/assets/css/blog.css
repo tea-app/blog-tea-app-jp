@@ -15,7 +15,8 @@
   border-top: 2px solid gray;
   padding: 30px 10px 100px;
 }
-.blog-arrow{
+
+#blog-arrow{
   padding: 10px 0 2px;
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
@@ -23,41 +24,78 @@
 }
 
 .blog-archives{
-  top: 90px;
   position: fixed;
-  width: 200px;
-  left: 40px;
+  width: 70%;
+  top: 80px;
+  left: 3%;
 }
 
 .blog-archives h1{
   padding: 0px 2px 4px 4px;
   font-size: 20px;
-}
-
-#blog-archive-list ul {
-  list-style: none;
-  font-size: 10px;
-}
-
-.blog-comments{
-  top: 90px;
-  position: fixed;
-  right: 40px;
-  width: 200px;
-}
-
-.blog-comments h1 {
-  padding: 0px 2px 4px 4px;
-  font-size: 20px;
   color: black;
 }
 
-textarea.box{
-  border: none;
-  border-radius: 10px;
-  box-shadow: none;
-  padding: 2px 4px;
-  width: 20%;
-  height: 10%;
+.blog-archive-list ul {
+  list-style: none;
+  font-size: 10px;
+  color: black;
 }
 
+.blog-comments{
+  position: fixed;
+  width: 15%;
+  height: 50%;
+  top: 80px;
+  right: 3%;
+}
+
+.blog-comments h1{
+  font-size: 20px;
+  padding: 0px 2px 4px 4px;
+  color: black;
+}
+
+.commentbox{
+  border: 2px solid grey;
+  border-radius: 10px;
+}
+
+.inputbox{
+  height: 20%;
+  width: 99%;
+  padding-top: 2px;
+  padding-left: 3px;
+  bottom: 2px;
+  border-bottom: 1px solid grey;
+  float: left;
+}
+
+textarea{
+  width: 55%;
+  height: 60%;
+  border-radius:10px;
+  box-shadow: none;
+  padding: 2px 8px;
+  margin-top: 1%;
+  margin-bottom: 5px;
+}
+
+#outputbox{
+  padding: 1px;
+  max-height: 200px;
+  overflow: scroll;
+}
+
+.outputboxs{
+  width: 90%;
+  height: 25%;
+  border: 1px solid grey;
+  border-radius: 10px;
+  padding: 1px 3px;
+  margin: 5px 0;
+}
+
+.outputboxs h1{
+  font-size: 5px;
+}
